@@ -70,11 +70,11 @@
 
 			<h2>Command-line Usage</h2>
 
-			<p>The command-line version can be downloaded here: <a href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.1.9/thumbcache_viewer_cmd.zip">Thumbcache Viewer CMD</a></p>
+			<p>The command-line version can be downloaded here: <a href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.2.0/thumbcache_viewer_cmd.zip">Thumbcache Viewer CMD</a></p>
 
 			<p>You can run the program from a command-line and supply the database file you wish to extract.</p>
 
-			<p>Example: thumbcache_viewer_cmd.exe thumbcache_32.db</p>
+			<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db</p>
 
 			<p>There are additional options that can be specified to allow you to generate various reports of the database content.</p>
 
@@ -87,20 +87,21 @@
 					<li>-c Generates a CSV (comma-separated values) report.</li>
 					<li>-z Excludes 0 byte files in the generated reports.</li>
 					<li>-n Prevents thumbnail images from being extracted.</li>
-					<li>-d Load a directory of databases instead of a single file.</li>
 					<li>-e Load a Windows Search database to map hash values.</li>
+					<li>-d Load a directory of databases instead of a single file.</li>
+					<li>-t Load a thumbcache database file.</li>
 				</ul>
 			</p>
 
-			<p>Example: thumbcache_viewer_cmd.exe -o Output -w -c -z -n -d Directory -e Windows.edb thumbcache_32.db</p>
+			<p>Example: thumbcache_viewer_cmd.exe -o Output -w -c -z -n -e Windows.edb -d Directory -t thumbcache_32.db</p>
 
 			<p>If you wish to save the command-line output to a file, you can use the redirect operator.</p>
 
-			<p>Example: thumbcache_viewer_cmd.exe thumbcache_32.db > output.txt</p>
+			<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db > output.txt</p>
 
 			<p>You can speed up the extraction and report generation by redirecting the command-line output to the NUL device.</p>
 
-			<p>Example: thumbcache_viewer_cmd.exe thumbcache_32.db > NUL</p>
+			<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db > NUL</p>
 
 			<p>The program can also be run normally (not through the command-line). It will ask for the database and whether you wish to include a report(s).</p>
 
