@@ -2,7 +2,7 @@ body
 {
 	margin: 0px;
 	background-color: #FAFAFA;
-	font-family: Tahoma, Arial;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-size: 10pt;
 	color: #222222;
 	line-height: 22px;
@@ -16,15 +16,26 @@ p
 h1
 {
 	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #DDDDDD;
 }
 
 h2
 {
-	margin: 10px 0px 10px 0px;
+	font-size: 20px;
+}
+
+h3
+{
+	font-size: 16px;
+}
+
+h2, h3
+{
+	margin: 0px 0px 10px 0px;
 	padding-bottom: 5px;	
 	border-bottom: 1px solid #DDDDDD;
-	font-family: Verdana, Tahoma, Arial;
-	font-size: 16px;
 	font-weight: 600;
 	color: #555555;
 	display: block;
@@ -44,9 +55,8 @@ a:hover
 
 a.header
 {
-	font-family: Verdana, Tahoma, Arial;
-	font-size: 22px;
-	font-weight: 500;
+	font-size: 24px;
+	font-weight: 600;
 	color: #555555;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -69,6 +79,7 @@ a.button
 	color: #FFFFFF;
 	text-decoration: none;
 	text-shadow: rgba( 0, 0, 0, 0.6 ) 0 1px 0;
+	white-space: nowrap;
 }
 
 a.button:hover
@@ -129,64 +140,164 @@ img.screenshot
 	width: auto;
 }
 
-header
+div.info
 {
-	position: fixed;
-	left: 30px;
-	top: 30px;
-	min-width: 265px;
-	padding-right: 30px;
-	border-image: linear-gradient( to bottom, rgb( 170, 170, 170 ), rgba( 0, 0, 0, 0 ) ) 1 100%;
-	-webkit-border-image: -webkit-gradient( linear, 0 0, 0 100%, from( rgb( 170, 170, 170 ) ), to( rgba( 0, 0, 0, 0 ) ) ) 1 100%;
-	-webkit-border-image: -webkit-linear-gradient( rgb( 170, 170, 170 ), rgba( 0, 0, 0, 0 ) ) 1 100%;
-	-moz-border-image: -moz-linear-gradient( rgb( 170, 170, 170 ), rgba( 0, 0, 0, 0 ) ) 1 100%;    
-	-o-border-image: -o-linear-gradient( rgb( 170, 170, 170 ), rgba( 0, 0, 0, 0 ) ) 1 100%;
-	border-right: 1px solid;
-	color: #232323;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
-section
+div.links
+{
+	width: 280px;
+	vertical-align: top;
+	padding-top: 12px;
+}
+
+li
+{
+	margin: 0px;
+}
+
+.container
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.panel_1,
+.panel_3
+{
+	min-width: 280px;
+	width: 280px;
+	padding: 0px 30px 30px 30px;
+}
+
+.panel_1
+{
+	border-right: 1px solid #DDDDDD;
+}
+
+.panel_3
+{
+	border-left: 1px solid #DDDDDD;
+}
+
+.panel_1 > div:first-child,
+.panel_3 > div:first-child
+{
+	position: fixed;
+	background: #FAFAFA;
+	padding-top: 30px;
+	width: 280px;
+	z-index: 10;
+}
+
+.panel_1 > div:last-child,
+.panel_3 > div:last-child
 {
 	position: relative;
-	left: 325px;
-	width: 800px;
-	margin: 30px;
+	top: 270px;
+	bottom: 0;
+	height: calc(100% - 270px);
 }
 
-footer
+.panel_1 > div:last-child > p:last-child,
+.panel_3 > div:last-child > p:last-child
 {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 270px;
+}
+
+.panel_2
+{
+	max-width: 1100px;
+	width: calc(100% - 760px);
+	padding: 30px;
+	background: #FFFFFF;
+	overflow: hidden;
+	z-index: 100;
+}
+
+.panel_3 > div > ul
+{
+	margin-top: 0px;
+}
+
+.scroll-to-top
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+	color: #fff;
 	position: fixed;
-	left: 30px;
-	bottom: 0px;
-	width: 265px;
+	bottom: 10px;
+	right: 25px;
+	font-size: 24pt;
+	font-weight: 600;
+	padding: 20px;
+	border-radius: 4px;
+	width: 20px;
+	height: 20px;
+	background-color: #000;
+	opacity: .4 !important;
+	transition: all .2s ease;
 }
 
-@media screen and (max-width: 1184px)
+.scroll-to-top:hover
 {
-	header, footer
-	{
-		position: static;
-		margin-left: 30px;
-	}
-
-	header
-	{
-		margin-top: 30px;
-		border: none;
-	}
-
-	section
-	{
-		left: 0px;
-		width: auto;
-		border-top: 1px solid #AAAAAA;
-		border-bottom: 1px solid #AAAAAA;
-	}
+	cursor: pointer;
+	opacity: .8 !important;
 }
 
-@media screen and (max-height: 555px) and (min-width: 1185px)
+.cheers
 {
-	footer
+	padding-top: 5px;
+	border-top: 1px solid #DDDDDD;
+	text-align: center;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 1080px)
+{
+	.container
+	{
+		flex-direction: column;
+	}
+
+	.panel_1
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		max-width: initial;
+		width: 100%;
+		padding: 0px;
+		border-right: none;
+		border-bottom: 1px solid #DDDDDD;
+	}
+
+	.panel_1 > div:first-child
+	{
+		position: initial;
+		text-align: center;
+	}
+	
+	.panel_1 > div:last-child
+	{
+		display: none;
+	}
+
+	.panel_2
+	{
+		max-width: initial;
+		width: initial;
+	}
+
+	.panel_3
 	{
 		display: none;
 	}

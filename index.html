@@ -25,120 +25,166 @@
 		</script>
 	</head>
 	<body>
-		<header>
-			<h1><a class="header" href="https://thumbcacheviewer.github.io/">Thumbcache Viewer</a></h1>
-			<br />
-			<p><a class="button" href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.3.8/thumbcache_viewer_32.zip">Download Thumbcache Viewer 32-bit</a></p>
-			<br />
-			<p><a class="button" href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.3.8/thumbcache_viewer_64.zip">Download Thumbcache Viewer 64-bit</a></p>
-			<p>Version 1.0.3.8<br />Released on 6/30/2023</p>
-			<br />
-			<p><a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=B8KT7Z87ECW66&lc=US&item_name=Thumbcache%20Viewer&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">Make A Donation</a></p>
-			<p>Please consider making a donation.<br />Your support is greatly appreciated.</p>
-			<br />
-			<p><a href="https://github.com/thumbcacheviewer/thumbcacheviewer">View project on GitHub</a></p>
-			<p><a href="https://erickutcher.github.io/">Check out my other projects</a></p>
-		</header>
-		<section>
-			<h2>About</h2>
+		<div class="container">
+			<div class="panel_1">
+				<div>
+					<h1><a class="header" href="https://thumbcacheviewer.github.io/">Thumbcache Viewer</a></h1>
+					<br />
+					<p><a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=B8KT7Z87ECW66&lc=US&item_name=Projects%20by%20Eric%20Kutcher&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">Make A Donation</a></p>
+					<p>Please consider making a donation.<br />Your support is greatly appreciated.</p>
+					<p><a href="https://erickutcher.github.io/">Check out my other projects</a></p>
+				</div>
+				<div id="ac1"></div>
+			</div>
+			<div class="panel_2">
+				<a name="Thumbcache_Viewer"></a>
+				<h2>Thumbcache Viewer</h2>
 
-			<p>Thumbcache Viewer allows you to extract thumbnail images from the thumbcache_*.db and iconcache_*.db database files found on Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, and Windows 11. The program comes in two flavors: a graphical user interface and command-line interface.</p>
-			
-			<p>Looking to open Thumbs.db files? Try my <a href="https://thumbsviewer.github.io/">Thumbs Viewer</a> instead.</p>
+				<p>Thumbcache Viewer allows you to extract thumbnail images from the thumbcache_*.db and iconcache_*.db database files found on Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, and Windows 11. The program comes in two flavors: a graphical user interface and command-line interface.</p>
 
-			<p><img class="screenshot" alt="Thumbcache Viewer" width="800" height="320" src="images/thumbcache_viewer.png"></p>
+				<p>Looking to open Thumbs.db files? Try my <a href="https://thumbsviewer.github.io/">Thumbs Viewer</a> instead.</p>
 
-			<h2>GUI Usage</h2>
+				<div class="info">
+					<div class="links">
+						<p><a class="button" href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.3.9/thumbcache_viewer_32.zip">Download Thumbcache Viewer 32-bit</a></p>
+						<br />
+						<p><a class="button" href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.3.9/thumbcache_viewer_64.zip">Download Thumbcache Viewer 64-bit</a></p>
+						<p>Version 1.0.3.9<br />Released on 7/14/2023</p>
+						<p><a href="https://github.com/thumbcacheviewer/thumbcacheviewer">View project on GitHub</a></p>
+					</div>
+					<div class="screenshot">
+						<p><img class="screenshot" alt="HTTP Downloader" width="800" height="320" src="images/thumbcache_viewer.png"></p>
+					</div>
+				</div>
 
-			<p>The main menu will allow you to save entries, export entries to a CSV (comma-separated values) file, remove entries from the list (the database is not modified), hide 0 byte entries, verify CRC-64 header and data checksums, and map files to entry hashes.</p>
+				<p>The main menu will allow you to save entries, export entries to a CSV (comma-separated values) file, remove entries from the list (the database is not modified), hide 0 byte entries, verify CRC-64 header and data checksums, and map files to entry hashes.</p>
 
-			<p>When verifying entries, mismatched checksums will be displayed in red along with the correct value. It's not that common to see unless the database has been overwritten or truncated. Another thing to note is that mapping files by scanning directories must be done on the same computer system in which the database was generated. This ensures that the correct inputs can be hashed to compare against the entry hash in the database. Mapping files using Windows.edb (ESE database) should be done on an operating system that shares the same or newer operating system version in which the Windows.edb was generated. Mapped entries that included extended information while searching the Windows.edb will be displayed in green.</p>
+				<p>When verifying entries, mismatched checksums will be displayed in red along with the correct value. It's not that common to see unless the database has been overwritten or truncated. Another thing to note is that mapping files by scanning directories must be done on the same computer system in which the database was generated. This ensures that the correct inputs can be hashed to compare against the entry hash in the database.</p>
 
-			<p>To rename a file in the list, click once on a <i>selected</i> list item. An edit box will display to rename the file. Press Enter when you are finished.</p>
+				<p>Prior to Windows 11, Windows Search stored information in an Extensible Storage Engine (ESE) database. Windows Search on Windows 11 uses SQLite. To map Windows Search databases (Windows.db) from Windows 11, you will either need to run the program within a Windows 11 system, or download the appropriate sqlite3.dll from <a href="https://www.sqlite.org">www.sqlite.org</a>. Mapping files using Windows.edb (ESE database) should be done on an operating system that shares the same or newer operating system version in which the Windows.edb was generated. Mapped entries that included extended information while searching the Windows.edb/Windows.db will be displayed in green.</p>
 
-			<p>Some of the column headers for the list can be clicked (while pressing Ctrl) and the entries below them will change. If you press Ctrl and click the Data Size column, for example, the entries will change from displaying in kilobytes, to simply bytes. Likewise, the Cache Entry Offset column will change from bytes, to kilobytes. The three hash columns (Data Checksum, Header Checksum, and Cache Entry Hash) will change from lowercase, to uppercase.</p>
+				<p>To rename a file in the list, click once on a <i>selected</i> list item. An edit box will display to rename the file. Press Enter when you are finished.</p>
 
-			<p>When an item is selected, an image window will pop up to preview the thumbnail. You can move the image around the window with the mouse or arrow keys. Each arrow key will move the image 1 pixel in that direction. By holding Ctrl and pressing an arrow key, the image will move 5 pixels. By holding Shift and pressing an arrow key, the image will move 25 pixels.</p>
+				<p>Some of the column headers for the list can be clicked (while pressing Ctrl) and the entries below them will change. If you press Ctrl and click the Data Size column, for example, the entries will change from displaying in kilobytes, to simply bytes. Likewise, the Cache Entry Offset column will change from bytes, to kilobytes. The three hash columns (Data Checksum, Header Checksum, and Cache Entry Hash) will change from lowercase, to uppercase.</p>
 
-			<p>To center the image in the image window you can either press the Home key, or middle mouse button.</p>
+				<p>When an item is selected, an image window will pop up to preview the thumbnail. You can move the image around the window with the mouse or arrow keys. Each arrow key will move the image 1 pixel in that direction. By holding Ctrl and pressing an arrow key, the image will move 5 pixels. By holding Shift and pressing an arrow key, the image will move 25 pixels.</p>
 
-			<p>To scale the image you can press the + or - keys to zoom in or out respectively. If you have a mouse wheel, you can scroll forward to zoom in, or scroll back to zoom out. If you don't have a mouse wheel, you can hold the right mouse button down and click the left mouse button to zoom in, or hold the left mouse button down and click the right mouse button to zoom out. Confused?</p>
+				<p>To center the image in the image window you can either press the Home key, or middle mouse button.</p>
 
-			<p>You can also run the program from a command-line and supply the database file you wish to open or save.</p>
+				<p>To scale the image you can press the + or - keys to zoom in or out respectively. If you have a mouse wheel, you can scroll forward to zoom in, or scroll back to zoom out. If you don't have a mouse wheel, you can hold the right mouse button down and click the left mouse button to zoom in, or hold the left mouse button down and click the right mouse button to zoom out. Confused?</p>
 
-			<p>Example to open: thumbcache_viewer.exe thumbcache_32.db<br />Example to save thumbnails: thumbcache_viewer.exe -o Output thumbcache_32.db<br />Example to save a CSV (comma-separated values) file: thumbcache_viewer.exe -c example.csv thumbcache_32.db<br />Use -z to hide 0 byte entries when opening the database.</p>
+				<p>You can also run the program from a command-line and supply the database file you wish to open or save.</p>
 
-			<h2>Command-line Usage</h2>
+				<p>Example to open: thumbcache_viewer.exe thumbcache_32.db<br />Example to save thumbnails: thumbcache_viewer.exe -o Output thumbcache_32.db<br />Example to save a CSV (comma-separated values) file: thumbcache_viewer.exe -c example.csv thumbcache_32.db<br />Use -z to hide 0 byte entries when opening the database.</p>
 
-			<p>The command-line version can be downloaded here: <a href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.2.0/thumbcache_viewer_cmd.zip">Thumbcache Viewer CMD</a></p>
+				<br />
 
-			<p>You can run the program from a command-line and supply the database file you wish to extract.</p>
+				<a name="Thumbcache_Viewer_CMD"></a>
+				<h2>Thumbcache Viewer CMD</h2>
 
-			<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db</p>
+				<div class="info">
+					<div class="links">
+						<p><a class="button" href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.2.1/thumbcache_viewer_cmd_32.zip">Download Thumbcache Viewer CMD 32-bit</a></p>
+						<br />
+						<p><a class="button" href="https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.2.1/thumbcache_viewer_cmd_64.zip">Download Thumbcache Viewer CMD 64-bit</a></p>
+						<p>Version 1.0.2.1<br />Released on 7/14/2023</p>
+					</div>
+				</div>
 
-			<p>There are additional options that can be specified to allow you to generate various reports of the database content.</p>
+				<p>You can run the program from a command-line and supply the database file you wish to extract.</p>
 
-			<p>The following is a list of supported options:</p>
+				<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db</p>
 
-			<p>
-				<ul>
-					<li>-o Sets the output directory for thumbnails and reports.</li>
-					<li>-w Generates an HTML report.</li>
-					<li>-c Generates a CSV (comma-separated values) report.</li>
-					<li>-z Excludes 0 byte files in the generated reports.</li>
-					<li>-n Prevents thumbnail images from being extracted.</li>
-					<li>-e Load a Windows Search database to map hash values.</li>
-					<li>-d Load a directory of databases instead of a single file.</li>
-					<li>-t Load a thumbcache database file.</li>
-				</ul>
-			</p>
+				<p>There are additional options that can be specified to allow you to generate various reports of the database content.</p>
 
-			<p>Example: thumbcache_viewer_cmd.exe -o Output -w -c -z -n -e Windows.edb -d Directory -t thumbcache_32.db</p>
+				<p>The following is a list of supported options:</p>
 
-			<p>If you wish to save the command-line output to a file, you can use the redirect operator.</p>
+				<p>
+					<ul>
+						<li>-o Sets the output directory for thumbnails and reports.</li>
+						<li>-w Generates an HTML report.</li>
+						<li>-c Generates a CSV (comma-separated values) report.</li>
+						<li>-z Excludes 0 byte files in the generated reports.</li>
+						<li>-n Prevents thumbnail images from being extracted.</li>
+						<li>-e Load a Windows Search database to map hash values.</li>
+						<li>-d Load a directory of databases instead of a single file.</li>
+						<li>-t Load a thumbcache database file.</li>
+					</ul>
+				</p>
 
-			<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db > output.txt</p>
+				<p>Example: thumbcache_viewer_cmd.exe -o Output -w -c -z -n -e Windows.edb -d Directory -t thumbcache_32.db</p>
 
-			<p>You can speed up the extraction and report generation by redirecting the command-line output to the NUL device.</p>
+				<p>If you wish to save the command-line output to a file, you can use the redirect operator.</p>
 
-			<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db > NUL</p>
+				<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db > output.txt</p>
 
-			<p>The program can also be run normally (not through the command-line). It will ask for the database and whether you wish to include a report(s).</p>
+				<p>You can speed up the extraction and report generation by redirecting the command-line output to the NUL device.</p>
 
-			<p>When specifying a file or directory path, it's best to surround it with quotes since spaces within the path might be interpreted as separate options.</p>
+				<p>Example: thumbcache_viewer_cmd.exe -t thumbcache_32.db > NUL</p>
 
-			<h2>Frequently Asked Questions About Thumbcache Databases</h2>
+				<p>The program can also be run normally (not through the command-line). It will ask for the database and whether you wish to include a report(s).</p>
 
-			<p><i><b>What are thumbcache database files and why are they created?</b></i></p>
+				<p>When specifying a file or directory path, it's best to surround it with quotes since spaces within the path might be interpreted as separate options.</p>
 
-			<p>Thumbcache files are databases that are native to Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, and Windows 11 systems. They contain thumbnail images of various content on your system. When you hover your mouse over an image in a folder, for example, a thumbnail preview of that image is generated. Windows will store this thumbnail in a thumbcache database for later retrieval (should you ever need to preview the image again). They're stored in these databases because it takes less system resources (CPU time and memory) to retrieve an already generated thumbnail as opposed to generating it every time you view an image. You'll notice this speed increase if you were to open a folder with a lot of images. If the images have not been stored in a thumbcache database, then the first time opening this folder will be somewhat slow (as it has to process all of the images). Any subsequent openings of this folder will be many times quicker.</p>
+				<br />
 
-			<p><i><b>How do I delete thumbcache database files?</b></i></p>
+				<a name="Thumbcache_FAQ"></a>
+				<h2>Frequently Asked Questions About Thumbcache Databases</h2>
 
-			<p>Technically, you shouldn't and generally you can't since they're in use by the system. However, you can remove the thumbnails inside of the thumbcache databases. To do this you'll need to run the <b>Disk Cleanup</b> utility. Open the <b>Start Menu</b> and click: <b>All Programs</b> > <b>Accessories</b> > <b>System Tools</b> > <b>Disk Cleanup</b>. When the <b>Disk Cleanup</b> utility starts, you'll be prompted to select a drive to clean. You'll need to select the drive that contains the thumbcache databases (it'll usually be the C drive). The utility will do a preliminary scan for files that it can clean and/or delete and will then list the results. Within these results there will be an entry called <b>Thumbnails</b>. Put a check next to it and press <b>OK</b>. <b>Disk Cleanup</b> will then remove the entries in the thumbcache databases.</p>
+				<p><i><b>What are thumbcache database files and why are they created?</b></i></p>
 
-			<p><i><b>How do I disable thumbnail creation?</b></i></p>
+				<p>Thumbcache files are databases that are native to Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, and Windows 11 systems. They contain thumbnail images of various content on your system. When you hover your mouse over an image in a folder, for example, a thumbnail preview of that image is generated. Windows will store this thumbnail in a thumbcache database for later retrieval (should you ever need to preview the image again). They're stored in these databases because it takes less system resources (CPU time and memory) to retrieve an already generated thumbnail as opposed to generating it every time you view an image. You'll notice this speed increase if you were to open a folder with a lot of images. If the images have not been stored in a thumbcache database, then the first time opening this folder will be somewhat slow (as it has to process all of the images). Any subsequent openings of this folder will be many times quicker.</p>
 
-			<p>You will need administrator access to do this. Thumbnail creation is a system feature and you'll need to use the <b>Local Group Policy Editor</b> to make changes to it. Open the <b>Start Menu</b> and type the following in the search box: <b>gpedit.msc</b>. You can also type this in the <b>Run</b> command box if you have that option available in the <b>Start Menu</b>. When this program is run, there will be a tree list on the left side of the window. You will need to navigate to the following item (starting from the top): <b>Local Computer Policy</b> > <b>User Configuration</b> > <b>Administrative Templates</b> > <b>Windows Components</b> > <b>Windows Explorer</b>. Once selected, you'll see a list of settings on the right side of the window. Most of these settings will probably have a state of <b>Not configured</b>. This is the default state. There are 4 settings that you'll need to consider when disabling thumbnails.</p>
+				<p><i><b>How do I delete thumbcache database files?</b></i></p>
 
-			<p>Locate the following setting in the list: <b>Turn off caching of thumbnail pictures</b></p>
+				<p>Technically, you shouldn't and generally you can't since they're in use by the system. However, you can remove the thumbnails inside of the thumbcache databases. To do this you'll need to run the <b>Disk Cleanup</b> utility. Open the <b>Start Menu</b> and click: <b>All Programs</b> > <b>Accessories</b> > <b>System Tools</b> > <b>Disk Cleanup</b>. When the <b>Disk Cleanup</b> utility starts, you'll be prompted to select a drive to clean. You'll need to select the drive that contains the thumbcache databases (it'll usually be the C drive). The utility will do a preliminary scan for files that it can clean and/or delete and will then list the results. Within these results there will be an entry called <b>Thumbnails</b>. Put a check next to it and press <b>OK</b>. <b>Disk Cleanup</b> will then remove the entries in the thumbcache databases.</p>
 
-			<p>This setting will allow you to prevent Windows from saving thumbnails in the thumbcache databases. In other words, the thumbnails will never be saved to the hard drive. To prevent Windows from saving thumbnails, right click on this setting and select <b>Edit</b>. In the next window that displays, select <b>Enable</b> and press <b>OK</b>. If this is the only setting you have set, then thumbnails will still be generated and visible, but they simply won't be saved. Furthermore, if this is the only setting you have set, then because the thumbnails have to be generated every time they're viewed, the system will be somewhat slower.</p>
+				<p><i><b>How do I disable thumbnail creation?</b></i></p>
 
-			<p>Locate the following two settings in the list: <b>Turn off the display of thumbnails and only display icons</b> and <b>Turn off the display of thumbnails and only display icons on network folders</b></p>
+				<p>You will need administrator access to do this. Thumbnail creation is a system feature and you'll need to use the <b>Local Group Policy Editor</b> to make changes to it. Open the <b>Start Menu</b> and type the following in the search box: <b>gpedit.msc</b>. You can also type this in the <b>Run</b> command box if you have that option available in the <b>Start Menu</b>. When this program is run, there will be a tree list on the left side of the window. You will need to navigate to the following item (starting from the top): <b>Local Computer Policy</b> > <b>User Configuration</b> > <b>Administrative Templates</b> > <b>Windows Components</b> > <b>Windows Explorer</b>. Once selected, you'll see a list of settings on the right side of the window. Most of these settings will probably have a state of <b>Not configured</b>. This is the default state. There are 4 settings that you'll need to consider when disabling thumbnails.</p>
 
-			<p>These settings will allow you to prevent Windows from displaying thumbnails. You'll end up seeing generic icons instead of a thumbnail. If you were to enable these two settings in tandem with <b>Turn off caching of thumbnail pictures</b>, then you will not experience the slowdown I described above. The downside is that you won't see any nice pictures. That's something you'll need to consider - eye candy vs speed.</p>
+				<p>Locate the following setting in the list: <b>Turn off caching of thumbnail pictures</b></p>
 
-			<p>Locate the following setting in the list: <b>Turn off the caching of thumbnails in hidden thumbs.db files</b></p>
+				<p>This setting will allow you to prevent Windows from saving thumbnails in the thumbcache databases. In other words, the thumbnails will never be saved to the hard drive. To prevent Windows from saving thumbnails, right click on this setting and select <b>Edit</b>. In the next window that displays, select <b>Enable</b> and press <b>OK</b>. If this is the only setting you have set, then thumbnails will still be generated and visible, but they simply won't be saved. Furthermore, if this is the only setting you have set, then because the thumbnails have to be generated every time they're viewed, the system will be somewhat slower.</p>
 
-			<p>Thumbs.db files are similar to thumbcache databases, but are not localized to a single folder. If you set this setting to <b>Enabled</b>, then they won't be generated.</p>
+				<p>Locate the following two settings in the list: <b>Turn off the display of thumbnails and only display icons</b> and <b>Turn off the display of thumbnails and only display icons on network folders</b></p>
 
-			<h2>Requirements</h2>
+				<p>These settings will allow you to prevent Windows from displaying thumbnails. You'll end up seeing generic icons instead of a thumbnail. If you were to enable these two settings in tandem with <b>Turn off caching of thumbnail pictures</b>, then you will not experience the slowdown I described above. The downside is that you won't see any nice pictures. That's something you'll need to consider - eye candy vs speed.</p>
 
-			<p>These programs require the Visual C++ 2008 runtime library. If you don't have those files, search the <a href="http://www.microsoft.com">Microsoft</a> site for "Microsoft Visual C++ 2008 Redistributable Package".</p>
-		</section>
-		<footer>
-			<p>Thanks for visiting!</p>
-		</footer>
+				<p>Locate the following setting in the list: <b>Turn off the caching of thumbnails in hidden thumbs.db files</b></p>
+
+				<p>Thumbs.db files are similar to thumbcache databases, but are not localized to a single folder. If you set this setting to <b>Enabled</b>, then they won't be generated.</p>
+
+				<br />
+
+				<h2>Requirements</h2>
+
+				<p>These programs require the Visual C++ 2008 runtime library. If you don't have those files, search the <a href="http://www.microsoft.com">Microsoft</a> site for "Microsoft Visual C++ 2008 Redistributable Package".</p>
+			</div>
+			<div class="panel_3">
+				<div>
+					<h3>Jump to:</h3>
+					<ul>
+						<li><a href="https://thumbcacheviewer.github.io/#Thumbcache_Viewer">Thumbcache Viewer</a></li>
+						<li><a href="https://thumbcacheviewer.github.io/#Thumbcache_CMD">Thumbcache Viewer CMD</a></li>
+						<li><a href="https://thumbcacheviewer.github.io/#Thumbcache_FAQ">Thumbcache FAQ</a></li>
+					</ul>
+				</div>
+				<div id="ac2"></div>
+			</div>
+		</div>
+		<div id="scroll-to-top" class="scroll-to-top" onclick="document.body.scrollTop=document.documentElement.scrollTop=0;" style="display: none;">&#708;</div>
+		<script type="text/javascript">
+			var scroll_button=document.getElementById("scroll-to-top");
+			window.addEventListener("scroll",function(){scroll_button.style.display=(document.body.scrollTop>150||document.documentElement.scrollTop>150)?"flex":"none";});
+		</script>
+		<script>
+			var el1 = document.getElementById('ac1');
+			var observer1 = new MutationObserver(function (mutations, observer1) {el1.style.height = "";});
+			observer1.observe(el1, {attributes: true, attributeFilter: ['style']});
+			var el2 = document.getElementById('ac2');
+			var observer2 = new MutationObserver(function (mutations, observer2) {el2.style.height = "";});
+			observer2.observe(el2, {attributes: true, attributeFilter: ['style']});
+		</script>
 	</body>
 </html>
