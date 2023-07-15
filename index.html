@@ -53,15 +53,25 @@
 						<p><a href="https://github.com/thumbcacheviewer/thumbcacheviewer">View project on GitHub</a></p>
 					</div>
 					<div class="screenshot">
-						<p><img class="screenshot" alt="HTTP Downloader" width="800" height="320" src="images/thumbcache_viewer.png"></p>
+						<p><img class="screenshot" alt="HTTP Downloader" width="626" height="473" src="images/thumbcache_viewer.webp"></p>
 					</div>
 				</div>
 
-				<p>The main menu will allow you to save entries, export entries to a CSV (comma-separated values) file, remove entries from the list (the database is not modified), hide 0 byte entries, verify CRC-64 header and data checksums, and map files to entry hashes.</p>
+				<p>The main menu will allow you to save entries, export entries to a CSV (comma-separated values) file, remove entries from the list (the database is not modified), hide 0 byte entries, verify CRC-64 header and data checksums, and map files to entry hashes. Clicking on an entry in the list will display it (if it's an image) in a separate window.</p>
+
+				<p><img class="screenshot" alt="HTTP Downloader" width="466" height="473" src="images/thumbcache_viewer_entry.webp"></p>
 
 				<p>When verifying entries, mismatched checksums will be displayed in red along with the correct value. It's not that common to see unless the database has been overwritten or truncated. Another thing to note is that mapping files by scanning directories must be done on the same computer system in which the database was generated. This ensures that the correct inputs can be hashed to compare against the entry hash in the database.</p>
 
-				<p>Prior to Windows 11, Windows Search stored information in an Extensible Storage Engine (ESE) database. Windows Search on Windows 11 uses SQLite. To map Windows Search databases (Windows.db) from Windows 11, you will either need to run the program within a Windows 11 system, or download the appropriate sqlite3.dll from <a href="https://www.sqlite.org">www.sqlite.org</a>. Mapping files using Windows.edb (ESE database) should be done on an operating system that shares the same or newer operating system version in which the Windows.edb was generated. Mapped entries that included extended information while searching the Windows.edb/Windows.db will be displayed in green.</p>
+				<p><img class="screenshot" alt="HTTP Downloader" width="626" height="213" src="images/scan_directories.webp"></p>
+
+				<p>Prior to Windows 11, Windows Search stored information in an Extensible Storage Engine (ESE) database. Windows Search on Windows 11 uses SQLite. To map Windows Search databases (Windows.db) from Windows 11, you will either need to run the program within a Windows 11 system, or download the appropriate sqlite3.dll from <a href="https://www.sqlite.org">www.sqlite.org</a>. Mapping files using Windows.edb (ESE database) should be done on an operating system that shares the same or newer operating system version in which the Windows.edb was generated.</p>
+
+				<p><img class="screenshot" alt="HTTP Downloader" width="626" height="213" src="images/scan_windows_search.webp"></p>
+
+				<p>Mapped entries that included extended information while searching the Windows.edb/Windows.db will be displayed in green. The Extended Information window may include timestamps, file paths, and snippets of text.</p>
+
+				<p><img class="screenshot" alt="HTTP Downloader" width="626" height="473" src="images/extended_information.webp"></p>
 
 				<p>To rename a file in the list, click once on a <i>selected</i> list item. An edit box will display to rename the file. Press Enter when you are finished.</p>
 
